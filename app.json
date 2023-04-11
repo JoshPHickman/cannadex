@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "cannabis-journal",
-    "slug": "cannabis-journal",
+    "name": "cannadex",
+    "slug": "cannadex",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/adaptive-icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
@@ -21,10 +21,38 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "versionCode": 1123,
+      "package": "com.redtide.cannadex",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "android": {
+            "permissions": [
+              "CAMERA",
+              "RECORD_AUDIO",
+              "READ_EXTERNAL_STORAGE",
+              "WRITE_EXTERNAL_STORAGE"
+            ],
+            "package": "com.google.android.GoogleCamera",
+            "versionCode": 1
+          }
+        }
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c846e5f3-b8a6-4e04-9f08-16292fd4973d"
+      }
     }
   }
 }
